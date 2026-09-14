@@ -20,25 +20,28 @@ export function Projects() {
 
         {featuredProject && (
           <Reveal delay={0.1} className="mt-12">
-            <article className="grid overflow-hidden rounded-2xl border border-hairline bg-surface/40 lg:grid-cols-2">
-              <div className="relative aspect-[16/10] lg:aspect-auto">
-                <Image
-                  src={featuredProject.image}
-                  alt={`${featuredProject.title} preview`}
-                  fill
-                  sizes="(min-width: 1024px) 50vw, 100vw"
-                  className="object-cover"
-                  priority
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-void/80 via-transparent to-transparent lg:bg-gradient-to-r" />
+            <article className="grid overflow-hidden rounded-2xl border border-hairline bg-surface/40 transition-colors duration-300 hover:border-accent-sky/30 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+              {/* LEFT: Full Image Container - preserves full image without cropping */}
+              <div className="relative flex items-center justify-center border-b border-hairline bg-[#070b14] p-5 sm:p-7 lg:border-b-0 lg:border-r lg:p-8">
+                <div className="relative w-full aspect-[1024/485] overflow-hidden rounded-xl border border-hairline/80 bg-surface shadow-2xl">
+                  <Image
+                    src={featuredProject.image}
+                    alt={`${featuredProject.title} preview`}
+                    fill
+                    sizes="(min-width: 1024px) 55vw, 100vw"
+                    className="object-contain"
+                    priority
+                  />
+                </div>
                 <span className="absolute left-4 top-4 font-mono text-xs text-accent-sky">
-                  01
+                  01 / FEATURED
                 </span>
-                <span className="absolute left-4 bottom-4 rounded-full border border-hairline-strong bg-void/70 px-3 py-1 font-mono text-[11px] text-accent-sky backdrop-blur-sm lg:hidden">
+                <span className="absolute right-4 top-4 rounded-full border border-hairline-strong bg-void/80 px-2.5 py-0.5 font-mono text-[11px] text-accent-sky backdrop-blur-sm lg:hidden">
                   {featuredProject.category}
                 </span>
               </div>
 
+              {/* RIGHT: Project Information */}
               <div className="flex flex-col justify-center p-7 sm:p-10">
                 <span className="hidden font-mono text-xs text-accent-sky lg:inline">
                   {featuredProject.category}
@@ -51,7 +54,7 @@ export function Projects() {
                 </p>
 
                 <ul
-                  className="mt-5 flex flex-wrap gap-2"
+                  className="mt-6 flex flex-wrap gap-2"
                   aria-label="Technologies used"
                 >
                   {featuredProject.technologies.map((tech) => (
@@ -64,7 +67,7 @@ export function Projects() {
                   ))}
                 </ul>
 
-                <div className="mt-7 flex flex-wrap items-center gap-4">
+                <div className="mt-8 flex flex-wrap items-center gap-4">
                   {featuredProject.liveUrl ? (
                     <a
                       href={featuredProject.liveUrl}
@@ -76,8 +79,9 @@ export function Projects() {
                       <ArrowUpRight size={15} />
                     </a>
                   ) : (
-                    <span className="text-sm text-text-muted">
-                      Live demo coming soon
+                    <span className="inline-flex items-center gap-1.5 rounded-full border border-hairline bg-surface/60 px-3.5 py-1.5 font-mono text-xs text-accent-cyan">
+                      <span className="h-1.5 w-1.5 rounded-full bg-accent-cyan" />
+                      Production Microservice
                     </span>
                   )}
                   {featuredProject.githubUrl ? (

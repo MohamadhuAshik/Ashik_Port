@@ -2,27 +2,32 @@ import type { Metadata } from "next";
 import { MotionProvider } from "@/components/ui/MotionProvider";
 import "./globals.css";
 
-const siteUrl = "https://your-portfolio-domain.com";
-const siteTitle = "Your Name — Full-Stack Developer";
+const siteUrl = "https://mohamadhuashik.dev";
+const siteTitle = "Mohamadhu Ashik S — Full Stack Developer";
 const siteDescription =
-  "Full-stack developer portfolio showcasing projects built with React, Next.js, Node.js, and MongoDB — focused on clean architecture and practical, production-ready applications.";
+  "Full Stack Developer with 2+ years of experience building web applications using React.js, Next.js, Node.js, and Express.js. Experienced in REST APIs, microservices, and payment gateway integration.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
     default: siteTitle,
-    template: "%s — Your Name",
+    template: "%s — Mohamadhu Ashik S",
   },
   description: siteDescription,
   keywords: [
-    "Full-Stack Developer",
+    "Mohamadhu Ashik S",
+    "Mohamadhu Ashik",
+    "Full Stack Developer",
     "React Developer",
-    "Next.js",
-    "TypeScript",
+    "Next.js Developer",
     "Node.js",
+    "Express.js",
+    "MongoDB",
+    "MySQL",
+    "Microservices",
     "Portfolio",
   ],
-  authors: [{ name: "Your Name" }],
+  authors: [{ name: "Mohamadhu Ashik S" }],
   openGraph: {
     type: "website",
     url: siteUrl,

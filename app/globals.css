@@ -25,6 +25,7 @@
 }
 
 @theme inline {
+  --color-background: var(--bg-void);
   --color-void: var(--bg-void);
   --color-base: var(--bg-base);
   --color-surface: var(--bg-surface);

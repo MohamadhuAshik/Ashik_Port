@@ -12,7 +12,7 @@ export function ProjectCard({ project }: { project: Project }) {
           alt={`${project.title} preview`}
           fill
           sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-          className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.06]"
+          className="object-cover object-top transition-transform duration-500 ease-out group-hover:scale-[1.06]"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-void/85 via-void/10 to-transparent" />
         <span className="absolute left-3 top-3 rounded-full border border-hairline-strong bg-void/70 px-3 py-1 font-mono text-[11px] text-accent-sky backdrop-blur-sm">
@@ -54,7 +54,10 @@ export function ProjectCard({ project }: { project: Project }) {
               />
             </a>
           ) : (
-            <span className="text-sm text-text-muted">Live demo coming soon</span>
+            <span className="inline-flex items-center gap-1.5 font-mono text-[11px] text-text-muted">
+              <span className="h-1.5 w-1.5 rounded-full bg-accent-cyan" />
+              Production System
+            </span>
           )}
           {project.githubUrl ? (
             <a

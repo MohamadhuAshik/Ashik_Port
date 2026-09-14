@@ -15,15 +15,15 @@ export function Footer() {
           aria-label="Go to home section"
         >
           <span className="flex h-9 w-9 items-center justify-center rounded-lg border border-hairline-strong bg-surface font-display text-sm font-semibold text-accent-sky">
-            YN
+            MA
           </span>
           <span className="font-display text-sm font-semibold text-text-primary">
-            Your Name
+            Mohamadhu Ashik S
           </span>
         </a>
 
         <p className="max-w-sm text-sm text-text-muted">
-          Building digital systems that feel simple.
+          Full Stack Developer · Building scalable digital systems that feel effortless.
         </p>
 
         <nav aria-label="Footer">
@@ -43,7 +43,7 @@ export function Footer() {
 
         <div className="flex items-center gap-5">
           <a
-            href="https://github.com/your-username"
+            href="https://github.com/mohamadhuashik"
             target="_blank"
             rel="noreferrer noopener"
             aria-label="GitHub profile"
@@ -52,7 +52,7 @@ export function Footer() {
             <FaGithub size={18} />
           </a>
           <a
-            href="https://linkedin.com/in/your-username"
+            href="https://linkedin.com/in/mohamadhuashik"
             target="_blank"
             rel="noreferrer noopener"
             aria-label="LinkedIn profile"
@@ -61,7 +61,7 @@ export function Footer() {
             <FaLinkedin size={18} />
           </a>
           <a
-            href="mailto:your.email@example.com"
+            href="mailto:mohamadhuashik@gmail.com"
             aria-label="Send an email"
             className="text-text-muted transition-colors hover:text-accent-sky"
           >
@@ -71,7 +71,7 @@ export function Footer() {
 
         <div className="w-full border-t border-hairline pt-6">
           <p className="font-mono text-xs text-text-muted">
-            © {year} Your Name. Built with Next.js + TypeScript.
+            © {year} Mohamadhu Ashik S. All rights reserved.
           </p>
         </div>
       </Container>

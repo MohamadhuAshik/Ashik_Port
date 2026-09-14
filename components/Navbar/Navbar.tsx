@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
@@ -9,8 +10,8 @@ import { Container } from "@/components/ui/Container";
 import { cn } from "@/lib/utils";
 
 const SOCIAL_LINKS = {
-  github: "https://github.com/your-username",
-  linkedin: "https://linkedin.com/in/your-username",
+  github: "https://github.com/mohamadhuashik",
+  linkedin: "https://linkedin.com/in/mohamadhuashik",
   resume: "/resume.pdf",
 };
 
@@ -73,15 +74,21 @@ export function Navbar() {
             className="flex items-center gap-3 rounded-md"
             aria-label="Go to home section"
           >
-            <span className="flex h-9 w-9 items-center justify-center rounded-lg border border-hairline-strong bg-surface font-display text-sm font-semibold text-accent-sky">
-              YN
-            </span>
+            <div className="relative flex h-9 w-9 shrink-0 overflow-hidden rounded-lg border border-accent-sky/50 bg-surface shadow-[0_0_12px_rgba(59,130,246,0.35)]">
+              <Image
+                src="/images/ashik-profile.jpg"
+                alt="Mohamadhu Ashik S"
+                fill
+                priority
+                className="object-cover object-top"
+              />
+            </div>
             <span className="hidden flex-col leading-tight sm:flex">
               <span className="font-display text-sm font-semibold text-text-primary">
-                Your Name
+                Mohamadhu Ashik
               </span>
               <span className="font-mono text-[11px] text-text-muted">
-                full-stack engineer
+                full-stack developer
               </span>
             </span>
           </a>

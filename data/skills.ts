@@ -6,166 +6,195 @@ import {
   SiTailwindcss,
   SiHtml5,
   SiCss,
+  SiBootstrap,
+  SiMaterialdesignicons,
   SiNodedotjs,
   SiExpress,
+  SiPython,
   SiMongodb,
   SiMysql,
   SiMongoose,
   SiGit,
   SiGithub,
+  SiPostgresql,
+  SiPostman,
+  SiNginx,
   SiNpm,
-  SiVite,
   SiVercel,
+  SiStripe,
 } from "react-icons/si";
-import { KeyRound, Webhook, Database as DatabaseIcon, Table2, AppWindow } from "lucide-react";
+import {
+  Webhook,
+  AppWindow,
+  CreditCard,
+  Network,
+  Share2,
+  Layers,
+} from "lucide-react";
 import type { Skill } from "@/lib/types";
 
 export const skills: Skill[] = [
   // Frontend
   {
-    name: "HTML",
+    name: "React.js",
     category: "frontend",
-    description: "Semantic, accessible markup",
-    icon: SiHtml5,
-  },
-  {
-    name: "CSS",
-    category: "frontend",
-    description: "Layout, animation, responsive design",
-    icon: SiCss,
-  },
-  {
-    name: "JavaScript",
-    category: "frontend",
-    description: "Core language for the web",
-    icon: SiJavascript,
-  },
-  {
-    name: "TypeScript",
-    category: "frontend",
-    description: "Typed JavaScript at scale",
-    icon: SiTypescript,
-  },
-  {
-    name: "React",
-    category: "frontend",
-    description: "Component-driven interfaces",
+    description: "Component-driven interfaces & hooks",
     icon: SiReact,
   },
   {
     name: "Next.js",
     category: "frontend",
-    description: "React framework, App Router",
+    description: "SSR, SSG, App Router & SEO optimization",
     icon: SiNextdotjs,
+  },
+  {
+    name: "JavaScript",
+    category: "frontend",
+    description: "ES6+, async/await & core DOM APIs",
+    icon: SiJavascript,
+  },
+  {
+    name: "TypeScript",
+    category: "frontend",
+    description: "Strict types & scalable interfaces",
+    icon: SiTypescript,
+  },
+  {
+    name: "HTML5",
+    category: "frontend",
+    description: "Semantic, accessible document structure",
+    icon: SiHtml5,
+  },
+  {
+    name: "CSS3",
+    category: "frontend",
+    description: "Responsive layouts, animations & flex/grid",
+    icon: SiCss,
   },
   {
     name: "Tailwind CSS",
     category: "frontend",
-    description: "Utility-first styling",
+    description: "Modern utility-first styling systems",
     icon: SiTailwindcss,
+  },
+  {
+    name: "Bootstrap",
+    category: "frontend",
+    description: "Rapid responsive grid & component styling",
+    icon: SiBootstrap,
+  },
+  {
+    name: "Material UI",
+    category: "frontend",
+    description: "Enterprise design system components",
+    icon: SiMaterialdesignicons,
   },
 
   // Backend
   {
     name: "Node.js",
     category: "backend",
-    description: "JavaScript runtime for servers",
+    description: "Event-driven asynchronous server runtimes",
     icon: SiNodedotjs,
   },
   {
     name: "Express.js",
     category: "backend",
-    description: "Minimal server framework",
+    description: "Robust HTTP servers, middleware & routing",
     icon: SiExpress,
   },
   {
-    name: "REST APIs",
+    name: "REST API Development",
     category: "backend",
-    description: "Designing clean HTTP interfaces",
+    description: "Secure, structured JSON endpoints & error handling",
     icon: Webhook,
   },
   {
-    name: "Authentication",
+    name: "Python",
     category: "backend",
-    description: "Session and token-based auth",
-    icon: KeyRound,
+    description: "Microservices scripting & AI pipeline connectors",
+    icon: SiPython,
   },
 
   // Database
   {
     name: "MongoDB",
     category: "database",
-    description: "Document-based data storage",
+    description: "Document storage, aggregations & indexing",
     icon: SiMongodb,
-  },
-  {
-    name: "MongoDB Atlas",
-    category: "database",
-    description: "Managed cloud clusters",
-    icon: DatabaseIcon,
   },
   {
     name: "MySQL",
     category: "database",
-    description: "Relational database engine",
+    description: "Relational database schemas & relational queries",
     icon: SiMysql,
   },
   {
-    name: "SQL",
+    name: "Postgres SQL",
     category: "database",
-    description: "Structured query language",
-    icon: Table2,
-  },
-  {
-    name: "Mongoose",
-    category: "database",
-    description: "Schema modeling for MongoDB",
-    icon: SiMongoose,
+    description: "Relational database schemas & relational queries",
+    icon: SiPostgresql,
   },
 
-  // Tools
+
+  // Architecture & Integration
+  {
+    name: "Microservices",
+    category: "architecture",
+    description: "Decoupled services, inter-service APIs & workers",
+    icon: Layers,
+  },
+  {
+    name: "Payment Gateways",
+    category: "architecture",
+    description: "Razorpay, Paytm, Paynimo & Stripe checkout",
+    icon: CreditCard,
+  },
+  {
+    name: "Third-Party API Integration",
+    category: "architecture",
+    description: "Webhooks, SDKs & external platform sync",
+    icon: Network,
+  },
+
+
+  // Tools & DevOps
   {
     name: "Git",
     category: "tools",
-    description: "Version control",
+    description: "Version control & collaborative branch workflows",
     icon: SiGit,
   },
+
   {
-    name: "GitHub",
+    name: "Postman",
     category: "tools",
-    description: "Hosting and collaboration",
-    icon: SiGithub,
+    description: "API testing, automated suites & collections",
+    icon: SiPostman,
+  },
+  {
+    name: "Nginx",
+    category: "tools",
+    description: "Reverse proxy, static caching & SSL config",
+    icon: SiNginx,
   },
   {
     name: "VS Code",
     category: "tools",
-    description: "Primary code editor",
+    description: "Primary development environment & debugging",
     icon: AppWindow,
   },
-  {
-    name: "npm",
-    category: "tools",
-    description: "Package management",
-    icon: SiNpm,
-  },
-  {
-    name: "Vite",
-    category: "tools",
-    description: "Fast local dev tooling",
-    icon: SiVite,
-  },
-  {
-    name: "Vercel",
-    category: "tools",
-    description: "Deployment and hosting",
-    icon: SiVercel,
-  },
+
 ];
 
-export const skillCategories: { label: string; value: Skill["category"] | "all" }[] = [
-  { label: "All", value: "all" },
-  { label: "Frontend", value: "frontend" },
-  { label: "Backend", value: "backend" },
-  { label: "Database", value: "database" },
-  { label: "Tools", value: "tools" },
-];
+export const skillCategories: {
+  label: string;
+  value: Skill["category"] | "all";
+}[] = [
+    { label: "All", value: "all" },
+    { label: "Frontend", value: "frontend" },
+    { label: "Backend", value: "backend" },
+    { label: "Databases", value: "database" },
+    { label: "Architecture", value: "architecture" },
+    { label: "DevOps & Tools", value: "tools" },
+  ];

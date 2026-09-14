@@ -1,33 +1,33 @@
 import Image from "next/image";
-import { GraduationCap, Layers, Sparkles, Compass } from "lucide-react";
+import { Layers, Sparkles, CreditCard, ShieldCheck } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
 import { aboutStats } from "@/data/about";
 
 const focusPoints = [
   {
-    icon: GraduationCap,
-    title: "Web development foundations",
-    description:
-      "Building a strong foundation in HTML, CSS, JavaScript, responsive design, and the fundamentals behind modern web applications.",
-  },
-  {
     icon: Layers,
-    title: "Full-stack projects",
+    title: "Microservices & REST APIs",
     description:
-      "Building complete applications with React, Next.js, Node.js, Express, APIs, MongoDB, and modern frontend tooling.",
+      "Developing scalable microservices architectures in Node.js and Python, high-throughput REST APIs, and clean schema design.",
   },
   {
     icon: Sparkles,
-    title: "Always learning",
+    title: "Next.js & SSR Migration",
     description:
-      "Continuously improving JavaScript, backend concepts, application architecture, authentication, and production workflows.",
+      "Migrating React.js applications to Next.js Server-Side Rendering across 50+ pages for notable SEO and performance gains.",
   },
   {
-    icon: Compass,
-    title: "Learn by building",
+    icon: CreditCard,
+    title: "Payment & Third-Party APIs",
     description:
-      "I learn best by turning ideas into working projects and improving them through real development experience.",
+      "Integrating Razorpay, Paytm, Paynimo, and Stripe gateways, along with social media platforms (Zernio) for automated workflows.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Multi-Role & Admin Tooling",
+    description:
+      "Engineering approval workflows, role-based access control, dedicated admin portals, and supporting live production releases.",
   },
 ];
 
@@ -46,17 +46,18 @@ export function About() {
 
             <div className="mt-6 space-y-4 text-base leading-relaxed text-text-secondary">
               <p>
-                I&apos;m a developer who enjoys turning ideas into real,
-                responsive web applications. I work with HTML, CSS, JavaScript,
-                React, Next.js, Node.js, MongoDB, and modern development tools
-                while continuously improving my full-stack skills.
+                I&apos;m a Full Stack Developer with 2+ years of hands-on
+                experience building and maintaining production web applications
+                using React.js, Next.js, Node.js, and Express.js.
               </p>
 
               <p>
-                I learn by building. Each project helps me go deeper into
-                JavaScript, frontend development, APIs, databases,
-                authentication, deployment, and the practical decisions
-                involved in creating reliable applications.
+                My work spans designing robust REST APIs, contributing to
+                Node.js/Python microservices, and integrating mission-critical
+                third-party services including payment gateways (Razorpay,
+                Paytm, Paynimo, Stripe) and social media automation platforms.
+                I enjoy taking features all the way from database schema design
+                and admin tooling to high-performance customer-facing interfaces.
               </p>
             </div>
 
@@ -104,10 +105,10 @@ export function About() {
               {/* Image */}
               <div className="relative aspect-[4/5] overflow-hidden">
                 <Image
-                  src="/images/profile.jpeg"
-                  alt="Hakkim Appas"
+                  src="/images/ashik-profile.jpg"
+                  alt="Mohamadhu Ashik S"
                   fill
-                  priority={false}
+                  priority={true}
                   sizes="(max-width: 1024px) 100vw, 42vw"
                   className="object-cover object-[center_22%] transition-transform duration-700 hover:scale-[1.03]"
                 />
@@ -133,11 +134,11 @@ export function About() {
                 {/* Name overlay */}
                 <div className="absolute bottom-5 left-5 right-5">
                   <p className="font-display text-2xl font-semibold tracking-tight text-white sm:text-3xl">
-                    Hakkim Appas
+                    Mohamadhu Ashik S
                   </p>
 
                   <p className="mt-1 font-mono text-xs text-white/60">
-                    Developer · Builder · Learner
+                    Full Stack Developer · Madurai, TN
                   </p>
                 </div>
               </div>
@@ -149,7 +150,15 @@ export function About() {
                     <span className="text-accent-sky">role</span>
                     <span className="text-text-muted">:</span>
                     <span className="text-accent-cyan">
-                      &quot;Developer&quot;
+                      &quot;Full Stack Developer&quot;
+                    </span>
+                  </div>
+
+                  <div className="flex gap-2">
+                    <span className="text-accent-sky">experience</span>
+                    <span className="text-text-muted">:</span>
+                    <span className="text-accent-cyan">
+                      &quot;2+ Years (Commercial)&quot;
                     </span>
                   </div>
 
@@ -157,22 +166,23 @@ export function About() {
                     <span className="text-accent-sky">focus</span>
                     <span className="text-text-muted">:</span>
                     <span className="text-accent-cyan">
-                      &quot;React · JavaScript · Node.js&quot;
+                      &quot;React.js · Next.js · Node.js&quot;
                     </span>
                   </div>
 
                   <div className="flex gap-2">
-                    <span className="text-accent-sky">database</span>
+                    <span className="text-accent-sky">databases</span>
                     <span className="text-text-muted">:</span>
                     <span className="text-accent-cyan">
-                      &quot;MongoDB&quot;
+                      &quot;MongoDB · MySQL&quot;
                     </span>
                   </div>
 
                   <div className="flex gap-2">
-                    <span className="text-accent-sky">status</span>
+                    <span className="text-accent-sky">location</span>
+                    <span className="text-text-muted">:</span>
                     <span className="text-accent-cyan">
-                      &quot;Open to opportunities&quot;
+                      &quot;Madurai, Tamil Nadu&quot;
                     </span>
                   </div>
                 </div>

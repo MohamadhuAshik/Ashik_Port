@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion, type Variants } from "framer-motion";
 import { ArrowRight, ArrowUpRight, CheckCircle2, CircleDot, Loader2 } from "lucide-react";
 import {
@@ -14,18 +15,23 @@ import { Container } from "@/components/ui/Container";
 import { AmbientGlow } from "@/components/ui/AmbientGlow";
 
 const techBadges = [
-  { label: "JavaScript", icon: SiJavascript },
-  { label: "TypeScript", icon: SiTypescript },
-  { label: "React", icon: SiReact },
+  { label: "React.js", icon: SiReact },
   { label: "Next.js", icon: SiNextdotjs },
   { label: "Node.js", icon: SiNodedotjs },
+  { label: "TypeScript", icon: SiTypescript },
   { label: "MongoDB", icon: SiMongodb },
+  { label: "JavaScript", icon: SiJavascript },
 ];
 
-const pipeline = [
-  { step: "01", label: "System", detail: "Architecture & data model", state: "done" as const },
-  { step: "02", label: "Build", detail: "Components & API routes", state: "active" as const },
-  { step: "03", label: "Deploy", detail: "Production rollout", state: "pending" as const },
+const pipeline: {
+  step: string;
+  label: string;
+  detail: string;
+  state: "done" | "active" | "pending";
+}[] = [
+  { step: "01", label: "Microservices & APIs", detail: "Node.js, Python & REST architecture", state: "done" },
+  { step: "02", label: "Full-Stack & SSR", detail: "Next.js 50+ page migration & React", state: "done" },
+  { step: "03", label: "Third-Party & Deploy", detail: "Payment gateways, Zernio & Live ops", state: "active" },
 ];
 
 const container: Variants = {
@@ -59,13 +65,21 @@ export function Hero() {
           className="grid items-center gap-16 lg:grid-cols-[1.05fr_0.95fr] lg:gap-12"
         >
           <div>
-            <motion.span
-              variants={item}
-              className="inline-flex items-center gap-2 rounded-full border border-hairline bg-surface/60 px-4 py-1.5 font-mono text-xs tracking-wide text-accent-sky"
-            >
-              <CircleDot size={13} className="text-accent-cyan" />
-              Full-Stack Developer
-            </motion.span>
+            <motion.div variants={item} className="flex items-center gap-3">
+              <div className="relative h-11 w-11 shrink-0 overflow-hidden rounded-full border-2 border-accent-sky/70 shadow-[0_0_14px_rgba(59,130,246,0.4)]">
+                <Image
+                  src="/images/ashik-profile.jpg"
+                  alt="Mohamadhu Ashik S"
+                  fill
+                  priority
+                  className="object-cover object-top"
+                />
+              </div>
+              <span className="inline-flex items-center gap-2 rounded-full border border-hairline bg-surface/60 px-4 py-1.5 font-mono text-xs tracking-wide text-accent-sky">
+                <CircleDot size={13} className="text-accent-cyan" />
+                Full Stack Developer · 2+ Years Experience
+              </span>
+            </motion.div>
 
             <motion.h1
               variants={item}
@@ -73,17 +87,17 @@ export function Hero() {
             >
               Building digital systems
               <br />
-              that{" "}
-              <span className="text-gradient">feel different.</span>
+              that <span className="text-gradient">scale reliably.</span>
             </motion.h1>
 
             <motion.p
               variants={item}
               className="mt-6 max-w-lg text-base leading-relaxed text-text-secondary sm:text-lg"
             >
-              I design and build modern, responsive web applications —
-              pairing practical frontend interfaces with dependable backend
-              systems using the current React and Node.js ecosystem.
+              I build and maintain production web applications with React.js,
+              Next.js, Node.js, and Express.js — specializing in REST APIs,
+              microservices, multi-gateway payment integrations, and high-performance
+              server-side rendering.
             </motion.p>
 
             <motion.div variants={item} className="mt-9 flex flex-wrap items-center gap-4">
@@ -169,10 +183,10 @@ export function Hero() {
               </div>
 
               <div className="mt-4 rounded-xl border border-hairline bg-[#060a10] p-4 font-mono text-[12px] leading-relaxed text-text-secondary">
-                <p className="text-accent-cyan">$ npm run build</p>
-                <p className="mt-1 text-text-muted">▲ compiling routes…</p>
-                <p className="text-text-muted">✓ 24 static pages generated</p>
-                <p className="text-accent-sky">✓ build completed in 4.2s</p>
+                <p className="text-accent-cyan">$ next build --turbo</p>
+                <p className="mt-1 text-text-muted">▲ compiling routes across 50+ SSR pages…</p>
+                <p className="text-text-muted">✓ microservices: Alfred AI, Zernio &amp; payments connected</p>
+                <p className="text-accent-sky">✓ build completed successfully</p>
               </div>
 
               <div className="mt-4 flex items-center justify-between rounded-xl border border-hairline bg-surface/70 px-4 py-3">
@@ -180,11 +194,11 @@ export function Hero() {
                   <p className="text-sm font-medium text-text-primary">
                     Deployment status
                   </p>
-                  <p className="text-xs text-text-muted">production · main</p>
+                  <p className="text-xs text-text-muted">production · main · live</p>
                 </div>
                 <span className="inline-flex items-center gap-1.5 rounded-full bg-accent-cyan/10 px-3 py-1 text-xs font-medium text-accent-cyan">
                   <ArrowUpRight size={13} />
-                  live
+                  active
                 </span>
               </div>
             </div>

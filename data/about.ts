@@ -1,6 +1,6 @@
 export const aboutStats = [
-  { label: "Projects Built", value: "Growing" },
-  { label: "Technologies", value: "Full-Stack" },
-  { label: "Years Learning", value: "Ongoing" },
-  { label: "Open to Opportunities", value: "Yes" },
+  { label: "Experience", value: "2+ Years" },
+  { label: "Projects Shipped", value: "5+ Systems" },
+  { label: "Core Stack", value: "Next.js · MERN" },
+  { label: "Status", value: "Available" },
 ];

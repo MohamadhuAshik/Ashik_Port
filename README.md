@@ -1,6 +1,6 @@
-# Your Name — Portfolio
+# Mohamadhu Ashik S — Portfolio
 
-A premium, dark/electric-blue developer portfolio built with Next.js (App Router), TypeScript, Tailwind CSS v4, and Framer Motion.
+A premium, dark/electric-blue developer portfolio for Mohamadhu Ashik S built with Next.js (App Router), TypeScript, Tailwind CSS v4, and Framer Motion.
 
 ## Getting started
 
@@ -11,12 +11,12 @@ npm run dev
 
 Open http://localhost:3000.
 
-## What to edit first
+## Identity & Configuration
 
-1. **Your name & identity**
-   - `app/layout.tsx` — site title/description in `metadata`, and `siteUrl`.
-   - `components/Navbar/Navbar.tsx`, `components/Footer/Footer.tsx` — the "YN" monogram, "Your Name", and `SOCIAL_LINKS` (GitHub, LinkedIn, resume path).
-   - `components/Contact/Contact.tsx` — email address and social links.
+1. **Identity & Links**
+   - `app/layout.tsx` — site metadata, keywords, and OpenGraph.
+   - `components/Navbar/Navbar.tsx`, `components/Footer/Footer.tsx` — "MA" monogram, "Mohamadhu Ashik S", and `SOCIAL_LINKS` (GitHub, LinkedIn, resume path).
+   - `components/Contact/Contact.tsx` — email address, phone, and social links.
 
 2. **Real projects**
    - `data/projects.ts` — replace the four placeholder entries with your real projects. Set `featured: true` on exactly one to control the large showcase slot at the top of the Projects section.
